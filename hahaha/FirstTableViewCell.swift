@@ -12,6 +12,14 @@ import UIKit
 
 class FirstTableViewCell: UITableViewCell {
 
+    @IBOutlet var cellLabel : UILabel!
+    @IBOutlet var cellImage : UIImageView!
+    @IBOutlet var cellButton : UIButton!
+    
+//    init(style: UITableViewCellStyle, reuseIdentifier: String) {
+//        super.init(style: style, reuseIdentifier: reuseIdentifier)
+//    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

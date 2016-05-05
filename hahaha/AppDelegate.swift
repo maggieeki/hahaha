@@ -32,9 +32,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         nav1.tabBarItem = UITabBarItem(title: "One", image: nil, tag: 1)
         nav2.tabBarItem = UITabBarItem(title: "Two", image: nil, tag: 2)
         
-        
         self.window!.rootViewController = tabs;
         self.window?.makeKeyAndVisible();
+        
+        UINavigationBar.appearance().backgroundColor = UIColor.greenColor()
+        UIBarButtonItem.appearance().tintColor = UIColor.magentaColor()
+        //Since iOS 7.0 UITextAttributeTextColor was replaced by NSForegroundColorAttributeName
+//        UINavigationBar.appearance().titleTextAttributes = [UITextAttributeTextColor: UIColor.blueColor()]
+        
+        UITabBar.appearance().translucent = false
+        UITabBar.appearance().barTintColor = UIColor.blackColor()
+        UITabBar.appearance().tintColor = UIColor.whiteColor()
+        
         return true
     }
 

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,7 +14,43 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88Z-RW-UbR">
+                        <rect key="frame" x="76" y="11" width="148" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="viD-dN-YVR">
+                        <rect key="frame" x="0.0" y="0.0" width="58" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="58" id="OSx-k3-Xhs"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96R-rb-JUK">
+                        <rect key="frame" x="232" y="7" width="46" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="46" id="ked-WL-opR"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="viD-dN-YVR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="91g-AU-CBb"/>
+                    <constraint firstItem="viD-dN-YVR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Bva-tO-SiF"/>
+                    <constraint firstItem="88Z-RW-UbR" firstAttribute="leading" secondItem="viD-dN-YVR" secondAttribute="trailing" constant="18" id="Fi5-52-WSt"/>
+                    <constraint firstItem="viD-dN-YVR" firstAttribute="centerY" secondItem="88Z-RW-UbR" secondAttribute="centerY" id="Jkl-Lw-ZyY"/>
+                    <constraint firstItem="88Z-RW-UbR" firstAttribute="baseline" secondItem="96R-rb-JUK" secondAttribute="baseline" id="QZ4-zE-A1h"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="96R-rb-JUK" secondAttribute="trailing" constant="34" id="dkL-BX-Ab1"/>
+                    <constraint firstAttribute="bottom" secondItem="viD-dN-YVR" secondAttribute="bottom" id="dkh-ry-C1l"/>
+                    <constraint firstItem="96R-rb-JUK" firstAttribute="leading" secondItem="88Z-RW-UbR" secondAttribute="trailing" constant="8" symbolic="YES" id="x5Q-gl-eRc"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="cellButton" destination="96R-rb-JUK" id="pBv-vJ-SUS"/>
+                <outlet property="cellImage" destination="viD-dN-YVR" id="hGn-4n-Q1h"/>
+                <outlet property="cellLabel" destination="88Z-RW-UbR" id="v4y-ej-a9a"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

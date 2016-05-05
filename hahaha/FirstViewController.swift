@@ -68,15 +68,24 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         let data = DefaultCells[indexPath.row]
-        let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: nil)
+//        let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: nil)
+        let identifier = "Cell"
         
+        var cell: FirstTableViewCell! = tableView.dequeueReusableCellWithIdentifier(identifier) as? FirstTableViewCell
+        
+        if cell == nil {
+            tableView.registerNib(UINib(nibName: "FirstTableViewCell", bundle: nil), forCellReuseIdentifier: identifier)
+            cell = tableView.dequeueReusableCellWithIdentifier(identifier) as? FirstTableViewCell
+        }
+        
+    
         switch(data) {
-        case .DescriptiveCell(var title, let description, _):
-            cell.textLabel!.text = title
-            cell.detailTextLabel!.text = description
+        case .DescriptiveCell(var title, let _, _):
+            cell.cellLabel!.text = title
+//            cell.detailTextLabel!.text = description
         case .ImageCell(var title, let imageName, _):
-            cell.textLabel!.text = title
-            cell.imageView!.image = UIImage(named: imageName)
+            cell.cellLabel!.text = title
+            cell.cellImage!.image = UIImage(named: imageName)
         }
         
         return cell
@@ -89,11 +98,11 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
 //        return cell
     }
     
-//    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 //        tableView.deselectRowAtIndexPath(indexPath, animated: true)
 //        
 //        let data = DefaultCells[indexPath.row]
-//        UIApplication.sharedApplication()!.openURL(NSURL.URLWithString(data.url))
+//        UIApplication.sharedApplication().openURL(NSURL.URLWithString(data.url)!)
 //    }
     
     /*

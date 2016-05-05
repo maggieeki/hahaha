@@ -8,35 +8,78 @@
 import Foundation
 import UIKit
 
-class FirstViewController: UIViewController, UITableViewDelegate{
-    mag@IBOutlet var tableView : UITableView
+enum CellData {
+    case DescriptiveCell(title: String, description: String, url: String)
+    case ImageCell(title: String, imageName: String, url: String)
+    
+    /* Computed property that grabs the url associated value out of the
+     enum object (perhaps there's a better way of doing this?) */
+    var url: String {
+        get {
+            switch(self) {
+            case let .DescriptiveCell(_, _, url):
+                return url
+            case let .ImageCell(_, _, url):
+                return url
+            }
+        }
+    }
+}
+
+class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    @IBOutlet var tableView : UITableView!
     var fruits: [String] = []
+    
+    let DefaultCells : [CellData] = [
+        .DescriptiveCell(title: "Github", description: "Build software better, together", url: "http://github.com/"),
+        .ImageCell(title: "Unsplash", imageName: "coffee.png", url: "http://unsplash.com"),
+        .DescriptiveCell(title: "Hacker News", description: "A social news website that caters to programmers and entrepreneurs", url:"http://news.ycombinator.com")
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fruits = ["Apple", "Pineapple", "Orange", "Blackberry", "Banana", "Pear", "Kiwi", "Strawberry", "Mango", "Walnut", "Apricot", "Tomato", "Almond", "Date", "Melon", "Water Melon", "Lemon", "Coconut", "Fig", "Passionfruit", "Star Fruit", "Clementin", "Citron", "Cherry", "Cranberry"]
         
-        self.registerClass(FirstTableViewCell.self, forCellReuseIdentifier: "cell")
+//        self.registerClass(FirstTableViewCell.self, forCellReuseIdentifier: "cell")
         // Do any additional setup after loading the view.
     }
 
+//    init() {
+//        /* UIKit will autoload MainViewController.xib as the nib. */
+//        super.init(nibName: nil, bundle: nil)
+//    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-//    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        return 1
-//    }
-//    
-//    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        let numberOfRows = fruits.count
 //        return numberOfRows
-//    }
-//
-//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return DefaultCells.count
+    }
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-//        
+        let data = DefaultCells[indexPath.row]
+        let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: nil)
+        
+        switch(data) {
+        case .DescriptiveCell(var title, let description, _):
+            cell.textLabel!.text = title
+            cell.detailTextLabel!.text = description
+        case .ImageCell(var title, let imageName, _):
+            cell.textLabel!.text = title
+            cell.imageView!.image = UIImage(named: imageName)
+        }
+        
+        return cell
 //        // Fetch Fruit
 //        let fruit = fruits[indexPath.row]
 //        
@@ -44,6 +87,13 @@ class FirstViewController: UIViewController, UITableViewDelegate{
 //        cell.textLabel?.text = fruit
 //        
 //        return cell
+    }
+    
+//    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+//        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+//        
+//        let data = DefaultCells[indexPath.row]
+//        UIApplication.sharedApplication()!.openURL(NSURL.URLWithString(data.url))
 //    }
     
     /*

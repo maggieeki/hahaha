@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstViewController" customModule="hahaha" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="Mss-rz-rVu" id="NkF-Vd-eW3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mss-rz-rVu">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="543"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="uje-DF-JYx"/>
@@ -29,7 +30,7 @@
                 <constraint firstItem="Mss-rz-rVu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OyP-06-8cP"/>
                 <constraint firstAttribute="trailing" secondItem="Mss-rz-rVu" secondAttribute="trailing" id="g6X-40-eME"/>
                 <constraint firstItem="Mss-rz-rVu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="kuE-kb-guc"/>
-                <constraint firstAttribute="bottom" secondItem="Mss-rz-rVu" secondAttribute="bottom" id="ywV-yh-K7o"/>
+                <constraint firstAttribute="bottom" secondItem="Mss-rz-rVu" secondAttribute="bottom" constant="57" id="ywV-yh-K7o"/>
             </constraints>
         </view>
     </objects>

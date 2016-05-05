@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F1AF9231CDB41F50073C3E4 /* Apple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F1AF91A1CDB41F50073C3E4 /* Apple.jpg */; };
+		9F1AF9241CDB41F50073C3E4 /* Banana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F1AF91B1CDB41F50073C3E4 /* Banana.jpg */; };
+		9F1AF9251CDB41F50073C3E4 /* Blackberry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F1AF91C1CDB41F50073C3E4 /* Blackberry.jpg */; };
+		9F1AF9261CDB41F50073C3E4 /* Kiwi.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F1AF91D1CDB41F50073C3E4 /* Kiwi.png */; };
+		9F1AF9271CDB41F50073C3E4 /* Mango.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F1AF91E1CDB41F50073C3E4 /* Mango.jpg */; };
+		9F1AF9281CDB41F50073C3E4 /* Orange.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F1AF91F1CDB41F50073C3E4 /* Orange.jpg */; };
+		9F1AF9291CDB41F50073C3E4 /* Pear.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F1AF9201CDB41F50073C3E4 /* Pear.jpg */; };
+		9F1AF92A1CDB41F50073C3E4 /* Pineapple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F1AF9211CDB41F50073C3E4 /* Pineapple.jpg */; };
+		9F1AF92B1CDB41F50073C3E4 /* Strawberry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F1AF9221CDB41F50073C3E4 /* Strawberry.jpg */; };
 		9F46428C1CD9EF7900F3F212 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46428B1CD9EF7900F3F212 /* AppDelegate.swift */; };
 		9F46428E1CD9EF7900F3F212 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F46428D1CD9EF7900F3F212 /* ViewController.swift */; };
 		9F4642911CD9EF7900F3F212 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F46428F1CD9EF7900F3F212 /* Main.storyboard */; };
@@ -32,6 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F1AF91A1CDB41F50073C3E4 /* Apple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Apple.jpg; sourceTree = "<group>"; };
+		9F1AF91B1CDB41F50073C3E4 /* Banana.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Banana.jpg; sourceTree = "<group>"; };
+		9F1AF91C1CDB41F50073C3E4 /* Blackberry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Blackberry.jpg; sourceTree = "<group>"; };
+		9F1AF91D1CDB41F50073C3E4 /* Kiwi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Kiwi.png; sourceTree = "<group>"; };
+		9F1AF91E1CDB41F50073C3E4 /* Mango.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mango.jpg; sourceTree = "<group>"; };
+		9F1AF91F1CDB41F50073C3E4 /* Orange.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Orange.jpg; sourceTree = "<group>"; };
+		9F1AF9201CDB41F50073C3E4 /* Pear.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pear.jpg; sourceTree = "<group>"; };
+		9F1AF9211CDB41F50073C3E4 /* Pineapple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pineapple.jpg; sourceTree = "<group>"; };
+		9F1AF9221CDB41F50073C3E4 /* Strawberry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Strawberry.jpg; sourceTree = "<group>"; };
 		9F4642881CD9EF7900F3F212 /* hahaha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hahaha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F46428B1CD9EF7900F3F212 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F46428D1CD9EF7900F3F212 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +86,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F1AF9191CDB41E70073C3E4 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				9F1AF91A1CDB41F50073C3E4 /* Apple.jpg */,
+				9F1AF91B1CDB41F50073C3E4 /* Banana.jpg */,
+				9F1AF91C1CDB41F50073C3E4 /* Blackberry.jpg */,
+				9F1AF91D1CDB41F50073C3E4 /* Kiwi.png */,
+				9F1AF91E1CDB41F50073C3E4 /* Mango.jpg */,
+				9F1AF91F1CDB41F50073C3E4 /* Orange.jpg */,
+				9F1AF9201CDB41F50073C3E4 /* Pear.jpg */,
+				9F1AF9211CDB41F50073C3E4 /* Pineapple.jpg */,
+				9F1AF9221CDB41F50073C3E4 /* Strawberry.jpg */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
 		9F46427F1CD9EF7900F3F212 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +123,7 @@
 		9F46428A1CD9EF7900F3F212 /* hahaha */ = {
 			isa = PBXGroup;
 			children = (
+				9F1AF9191CDB41E70073C3E4 /* Image */,
 				9F46428B1CD9EF7900F3F212 /* AppDelegate.swift */,
 				9F46428D1CD9EF7900F3F212 /* ViewController.swift */,
 				9F4642AF1CD9F13300F3F212 /* FirstViewController.swift */,
@@ -196,9 +231,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F4642AE1CD9F12100F3F212 /* SecondViewController.xib in Resources */,
+				9F1AF9281CDB41F50073C3E4 /* Orange.jpg in Resources */,
+				9F1AF9231CDB41F50073C3E4 /* Apple.jpg in Resources */,
+				9F1AF9251CDB41F50073C3E4 /* Blackberry.jpg in Resources */,
+				9F1AF9291CDB41F50073C3E4 /* Pear.jpg in Resources */,
+				9F1AF9241CDB41F50073C3E4 /* Banana.jpg in Resources */,
 				9F4642B21CD9F13300F3F212 /* FirstViewController.xib in Resources */,
 				9F4642961CD9EF7900F3F212 /* LaunchScreen.storyboard in Resources */,
+				9F1AF92B1CDB41F50073C3E4 /* Strawberry.jpg in Resources */,
+				9F1AF9271CDB41F50073C3E4 /* Mango.jpg in Resources */,
 				9F4642931CD9EF7900F3F212 /* Assets.xcassets in Resources */,
+				9F1AF92A1CDB41F50073C3E4 /* Pineapple.jpg in Resources */,
+				9F1AF9261CDB41F50073C3E4 /* Kiwi.png in Resources */,
 				9F4642B61CD9F5F000F3F212 /* FirstTableViewCell.xib in Resources */,
 				9F4642911CD9EF7900F3F212 /* Main.storyboard in Resources */,
 			);
@@ -410,6 +454,7 @@
 				9F4642A71CD9EF7900F3F212 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F4642A81CD9EF7900F3F212 /* Build configuration list for PBXNativeTarget "hahahaUITests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +463,7 @@
 				9F4642AA1CD9EF7900F3F212 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

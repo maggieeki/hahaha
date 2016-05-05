@@ -38,8 +38,10 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fruits = ["Apple", "Pineapple", "Orange", "Blackberry", "Banana", "Pear", "Kiwi", "Strawberry", "Mango", "Walnut", "Apricot", "Tomato", "Almond", "Date", "Melon", "Water Melon", "Lemon", "Coconut", "Fig", "Passionfruit", "Star Fruit", "Clementin", "Citron", "Cherry", "Cranberry"]
-        
+//        fruits = ["Apple", "Pineapple", "Orange", "Blackberry", "Banana", "Pear", "Kiwi", "Strawberry", "Mango", "Walnut", "Apricot", "Tomato", "Almond", "Date", "Melon", "Water Melon", "Lemon", "Coconut", "Fig", "Passionfruit", "Star Fruit", "Clementin", "Citron", "Cherry", "Cranberry"]
+
+        fruits = ["Apple", "Pineapple", "Orange", "Blackberry", "Banana", "Pear", "Kiwi", "Strawberry", "Mango"]
+
 //        self.registerClass(FirstTableViewCell.self, forCellReuseIdentifier: "cell")
         // Do any additional setup after loading the view.
     }
@@ -60,15 +62,16 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        let numberOfRows = fruits.count
-//        return numberOfRows
-        return DefaultCells.count
+        let numberOfRows = fruits.count
+        return numberOfRows
+//        return DefaultCells.count
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        let data = DefaultCells[indexPath.row]
+//        let data = DefaultCells[indexPath.row]
 //        let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: nil)
+        
         let identifier = "Cell"
         
         var cell: FirstTableViewCell! = tableView.dequeueReusableCellWithIdentifier(identifier) as? FirstTableViewCell
@@ -78,24 +81,23 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cell = tableView.dequeueReusableCellWithIdentifier(identifier) as? FirstTableViewCell
         }
         
-    
-        switch(data) {
-        case .DescriptiveCell(var title, let _, _):
-            cell.cellLabel!.text = title
-//            cell.detailTextLabel!.text = description
-        case .ImageCell(var title, let imageName, _):
-            cell.cellLabel!.text = title
-            cell.cellImage!.image = UIImage(named: imageName)
-        }
+        
+        // Fetch Fruit
+        let fruit = fruits[indexPath.row]
+
+        // Configure Cell
+        cell.cellLabel?.text = fruit
+        cell.cellImage!.image = UIImage(named: fruits[indexPath.row])
+//        switch(data) {
+//        case .DescriptiveCell(var title, let _, _):
+//            cell.cellLabel!.text = title
+////            cell.detailTextLabel!.text = description
+//        case .ImageCell(var title, let imageName, _):
+//            cell.cellLabel!.text = title
+//            cell.cellImage!.image = UIImage(named: imageName)
+//        }
         
         return cell
-//        // Fetch Fruit
-//        let fruit = fruits[indexPath.row]
-//        
-//        // Configure Cell
-//        cell.textLabel?.text = fruit
-//        
-//        return cell
     }
     
 //    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
